@@ -14,6 +14,13 @@
       <StockLineChart :chart-data="chartData" :chart-options="chartOptions" />
       <DonutChart />
     </div>
+    <div class="chartsBottom">
+      <!-- LineChart hinzufügen -->
+      <div class="fakechart1"><NetIncomeBarChart /></div>
+      <div class="fakechart2"><GrossMarginBarChart /></div>
+      <div class="fakechart3"><RevenueGrowthBarChart /></div>
+
+    </div>
   </div>
 </template>
 
@@ -22,6 +29,9 @@ import CompanyCard from '../components/CompanyCard.vue';
 import DashboardHeader from '../components/DashboardHeader.vue';
 import LineChart from '../components/LineChart.vue';
 import DonutChart from '../components/DonutChart.vue';
+import NetIncomeBarChart from '../components/NetIncomeBarChart.vue';
+import GrossMarginBarChart from '../components/GrossMarginBarChart.vue';
+import RevenueGrowthBarChart from '../components/RevenueGrowthBarChart.vue';
 
 export default {
   name: "DashboardView",
@@ -30,6 +40,9 @@ export default {
     CompanyCard,
     StockLineChart: LineChart,
     DonutChart,
+    NetIncomeBarChart,
+    GrossMarginBarChart,
+    RevenueGrowthBarChart
   },
 
   data() {
@@ -160,5 +173,36 @@ export default {
   margin-top: 2rem;
   width: 1200px;
   height: 352px;
+}
+
+.chartsBottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 1200px;
+  height: 352px;
+}
+
+.fakechart1 {
+  flex: auto;
+  height: 352px;
+  background-color: #011F35;
+  border-radius: 1.25rem;
+}
+
+.fakechart2 {
+  width: 293px;
+  height: 352px;
+  background-color: #011F35;
+  border-radius: 1.25rem;
+}
+
+.fakechart3 {
+  width: 454px;
+  height: 352px;
+  background-color: #011F35;
+  border-radius: 1.25rem;
 }
 </style>

@@ -47,6 +47,7 @@ export default defineComponent({
   },
   data() {
     return {
+      // eslint-disable-next-line vue/no-dupe-keys
       chartOptions: {
         responsive: true,
         maintainAspectRatio: false,
